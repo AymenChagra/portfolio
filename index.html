@@ -2,80 +2,178 @@
 <html lang="en">
 <head>
   <title>Home</title>
-  <!--<link rel="stylesheet" href="css/main.css">-->
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .navigation__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navigation__list li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navigation__list a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+      width: 100%;
+      max-width: 800px; /* Adjust the max-width as needed */
+      text-align: left;
+    }
+
+    .about {
+      background-color: #ecf0f1;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .about img {
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+    }
+
+		.about h1 {
+      color: #2c3e50;
+      text-align: center; /* Center the h1 tag */
+    }
+
+    .about p {
+      line-height: 1.6;
+    }
+
+		.nom, .age{
+			text-align: center
+		}		
+    .socialmedia {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .Linkedin_link,
+    .Facebook_link,
+    .Instagram_link {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .Linkedin_link {
+      background-color: #3498db;
+    }
+
+    .Facebook_link {
+      background-color: #3b5998;
+    }
+
+    .Instagram_link {
+      background-color: #e4405f;
+    }
+
+    .Linkedin_link:hover,
+    .Facebook_link:hover,
+    .Instagram_link:hover {
+      background-color: #2980b9;
+    }
+
+    .footer {
+      background-color: #34495e;
+      color: #ecf0f1;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+
+
+  </style>
 </head>
 <body>
-	
-	<!-- SECTION: Splashscreen 	
-	<div class="splashscreen">
-		<div class="preloader">
-			<span class="preloader__text">Loading</span>
-		</div>
-	</div> --> 
-	<!-- END SECTION: Splashscreen -->
-	
-	<!-- SECTION: Intro -->
-	<header class="header">
-		<!-- SECTION: Navigation -->
-	<div id="top" class="navigation">
-		<div class="navigation__wrapper wrapper--large">
-			<!-- <a class="navigation__logo logo" href="#0">Logo</a> -->
-			<nav class="navigation__container">
-				<ul class="navigation__list">
-					<li><a href="index.html">Acceuil</a></li>
-					<li><a href="parcours.html">Parcours académique</a></li>
-					<li><a href="experience.html">experiences et projets</a></li>
-					<li><a href="contact.html">contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<!-- END SECTION: Navigation -->
-	</header>
-	<!-- END SECTION: Intro -->
-	<br>
-	<main role="main">
-		<!-- SECTION: About -->
-		<section class="about">
-			<h1>A propos de moi</h1>
-			<img src="images/profile.png" width="250px">
-			<p> <strong>Mohamed Aymen Chagra</strong> </style></p>
-			<p><strong> Age:</strong>25ans</p>
-			<p> Étudiant en 1ère année du cycle d'ingénierie informatique à ESPRIT (Ecole Sup Privée d'Ingénierie et de Technologies) </style></p>
-			<p>
-				Après avoir obtenu mon diplôme en génie civil, j'ai pris la décision audacieuse de me lancer dans un nouveau chapitre passionnant 
-				dans le domaine de l'informatique. 
-				Ma transition vers l'informatique est motivée par le désir d'explorer de nouveaux 
-				horizons et d'embrasser les défis stimulants que le monde numérique offre. 
-
-				Ayant complété des cours de formation spécialisés et acquis des compétences clés dans le domaine, 
-				je suis déterminé à apporter une perspective unique à mon nouveau parcours professionnel.
-			</p>
-		</section>
-		<!-- END SECTION: About -->
-		
-		
-		<!-- SECTION: social links -->
-		<section class="socialmedia">
-			<a class="Linkedin_link" href="https://www.linkedin.com/in/aymen-chagra-247b461b4/?originalSubdomain=tn" target="_blank">Linkedin</a>
-			<a class="Linkedin_link" href="https://www.facebook.com/medaymen.chagra/" target="_blank">Facebook</a>
-			<a class="Linkedin_link" href="https://www.instagram.com/medaymenchagra/" target="_blank">Instagram</a>
-		</section>
-		<!-- END SECTION: social links -->
-	</main>
-
-	<br>
-	<!-- SECTION: Footer -->
-	<footer class="footer">
-		<div class="footer__wrapper wrapper--large">
-			<p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
-		</div>
-	</footer>
-	<!-- END SECTION: Footer -->
   
-	<!--
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="js/functions-min.js"></script>
-	-->
+  <header class="header">
+    <div id="top" class="navigation">
+      <div class="navigation__wrapper wrapper--large">
+        <nav class="navigation__container">
+          <ul class="navigation__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="parcours.html">Parcours académique</a></li>
+            <li><a href="experience.html">Expériences et projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- SECTION: About -->
+    <section class="about">
+      <h1>A propos de moi</h1>
+      <img src="images/profile.png" width="250px" alt="Profile Picture">
+      <p class="nom"><strong>Mohamed Aymen Chagra</strong></p>
+      <p class="age"><strong>Age:</strong> 25 ans</p>
+      <p>Étudiant en 1ère année du cycle d'ingénierie informatique à ESPRIT (Ecole Sup Privée d'Ingénierie et de Technologies)</p>
+      <p>
+        Après avoir obtenu mon diplôme en génie civil, j'ai pris la décision audacieuse de me lancer dans un nouveau chapitre passionnant
+        dans le domaine de l'informatique.
+        Ma transition vers l'informatique est motivée par le désir d'explorer de nouveaux horizons et d'embrasser les défis stimulants que le monde numérique offre.
+        Ayant complété des cours de formation spécialisés et acquis des compétences clés dans le domaine, je suis déterminé à apporter une perspective unique à mon nouveau parcours professionnel.
+      </p>
+    </section>
+    <!-- END SECTION: About -->
+
+    <!-- SECTION: Social links -->
+    <section class="socialmedia">
+      <a class="Linkedin_link" href="https://www.linkedin.com/in/aymen-chagra-247b461b4/?originalSubdomain=tn" target="_blank">Linkedin</a>
+      <a class="Facebook_link" href="https://www.facebook.com/medaymen.chagra/" target="_blank">Facebook</a>
+      <a class="Instagram_link" href="https://www.instagram.com/medaymenchagra/" target="_blank">Instagram</a>
+    </section>
+    <!-- END SECTION: Social links -->
+  </main>
+
+  <!-- SECTION: Footer -->
+  <footer class="footer">
+    <div class="footer__wrapper wrapper--large">
+      <p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
+    </div>
+  </footer>
+  <!-- END SECTION: Footer -->
+
 </body>
 </html>

@@ -2,77 +2,129 @@
 <html lang="en">
 <head>
   <title>Parcours</title>
-  <!--<link rel="stylesheet" href="css/main.css">-->
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .navigation__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navigation__list li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navigation__list a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+      width: 100%;
+      max-width: 800px; /* Adjust the max-width as needed */
+      text-align: left;
+    }
+
+    .parcours {
+      background-color: #ecf0f1;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      text-align: center; /* Center the text in the parcours section */
+    }
+
+    .parcours h1 {
+      color: #2c3e50;
+    }
+
+    .parcours p {
+      line-height: 1.6;
+    }
+
+    .parcours img {
+      display: block;
+      margin: 20px auto; /* Add margin for spacing */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    }
+
+    .footer {
+      background-color: #34495e;
+      color: #ecf0f1;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
 </head>
+<body>
+  
+  <header class="header">
+    <div id="top" class="navigation">
+      <div class="navigation__wrapper wrapper--large">
+        <nav class="navigation__container">
+          <ul class="navigation__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="parcours.html">Parcours académique</a></li>
+            <li><a href="experience.html">Expériences et projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<body>	
-	<!-- SECTION: Splashscreen 
-	<div class="splashscreen">
-		<div class="preloader">
-			<span class="preloader__text">Loading</span>
-		</div>
-	</div> 
-	--> 
-	<!-- END SECTION: Splashscreen -->
-	
-	<!-- SECTION: Intro -->
-	<header class="header">
-		<!-- SECTION: Navigation -->
-	<div id="top" class="navigation">
-		<div class="navigation__wrapper wrapper--large">
-			<!-- <a class="navigation__logo logo" href="#0">Logo</a> -->
-			<nav class="navigation__container">
-				<ul class="navigation__list">
-					<li><a href="index.html">Acceuil</a></li>
-					<li><a href="parcours.html">Parcours académique</a></li>
-					<li><a href="experience.html">experiences et projets</a></li>
-					<li><a href="contact.html">contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<!-- END SECTION: Navigation -->
-	</header>
-	<!-- END SECTION: Intro -->
+  <main role="main">
+    <!-- SECTION: Parcours académique -->
+    <section id="parcours" class="parcours">
+      <h1>Parcours académique</h1>
+      <p><strong>2023: </strong>1ère année du cycle d’ingénieur en informatique
+        École supérieure privée d'ingénierie et de technologie (Esprit)</p>
+      <img src="images/logo_esprit2.jpg" width="250px" alt="Esprit Logo">
+      <p><strong>2019-2022: </strong>Cycle d’ingénieur en génie civil option structures et ouvrages
+        École supérieure privée d'ingénierie et de technologie (Esprit)</p>
+      <img src="images/soutenance.jpg" width="250px" alt="Soutenance Image">
+      <p><strong>2017-2019: </strong>Cycle préparatoire intégré aux études de l'ingénieur spécialité :
+        Génie civil</p>
+      <p><strong>2013-2017: </strong>Baccalauréat en mathématiques Mention: assez-bien
+        Lycée Khaznadar, Bardo</p>
+      <img src="images/lycée.jpg" width="250px" alt="Lycée Khaznadar Image">
+    </section>
+    <!-- END SECTION: Parcours académique -->
+  </main>
 
-	<br>
-	<main role="main">
-		<!-- SECTION: parcours-->
-		<section id="parcours" class="parcours">
-			<h1>Parcours acdémique</h1>
-			<p><strong>2023: </strong>1 ere année du cycle d’ingenieur en informatique
-				École supérieure privée d'ingénierie et de technologie (Esprit)
-			<p>
-			<img src="images/logo_esprit2.jpg" width="250px"> <br>
-			<p><strong>2019-2022: </strong>cycle d’ingenieur en genie civil option structures et ouvrages
-				École supérieure privée d'ingénierie et de technologie (Esprit)
-			<p>
-			<img src="images/soutenance.jpg" width="250px"> <br>
-			<p><strong>2017-2019: </strong> Cycle préparatoire intégré aux études de l'ingénieur spécialité : 
-				Génie civil</p>
-			<br>
-			<p><strong>2013-2017: </strong>Baccalauréat en mathématiques Mention : assez-bien
-				Lycée Khaznadar, Bardo
-			</p>
-			<img src="images/lycée.jpg" width="250px">	
-			<br>
-		</section>
-		<!-- END SECTION: parcours -->
-	</main>
-
-	<!-- SECTION: Footer -->
-	<footer class="footer">
-		<div class="footer__wrapper wrapper--large">
-			<p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
-			
-		</div>
-	</footer>
-	<!-- END SECTION: Footer -->
-
-	<!--
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="js/functions-min.js"></script>
-	-->
+  <!-- SECTION: Footer -->
+  <footer class="footer">
+    <div class="footer__wrapper wrapper--large">
+      <p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
+    </div>
+  </footer>
+  <!-- END SECTION: Footer -->
 
 </body>
 </html>

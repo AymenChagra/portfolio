@@ -2,108 +2,197 @@
 <html lang="en">
 <head>
   <title>Experience/projets</title>
-  <!--<link rel="stylesheet" href="css/main.css">-->
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .navigation__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navigation__list li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navigation__list a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+      width: 100%;
+      max-width: 800px; /* Adjust the max-width as needed */
+      text-align: left;
+    }
+
+    h1,
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    .projets_academiques,
+    .projets_indépendants {
+      background-color: #ecf0f1;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .projets_academiques img,
+    .projets_indépendants img {
+      display: block;
+      margin: 20px auto; /* Add margin for spacing */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    }
+
+    .projets_academiques h2,
+    .projets_indépendants h2 {
+      color: #626465;
+    }
+
+		.liencontainer{
+			display:flex;
+			justify-content: center;
+			margin-bottom: 50px;
+		}
+
+    .lienProjet {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #244f6c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .lienProjet:hover {
+      background-color: #2980b9;
+    }
+
+    .footer {
+      background-color: #34495e;
+      color: #ecf0f1;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-	
-	<!-- SECTION: Splashscreen 
-	<div class="splashscreen">
-		<div class="preloader">
-			<span class="preloader__text">Loading</span>
-		</div>
-	</div> -->
-	<!-- END SECTION: Splashscreen -->
+  
+  <header class="header">
+    <div id="top" class="navigation">
+      <div class="navigation__wrapper wrapper--large">
+        <nav class="navigation__container">
+          <ul class="navigation__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="parcours.html">Parcours académique</a></li>
+            <li><a href="experience.html">Experiences et projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-	<!-- SECTION: Intro -->
-	<header class="header">
-		<!-- SECTION: Navigation -->
-	<div id="top" class="navigation">
-		<div class="navigation__wrapper wrapper--large">
-			<!-- <a class="navigation__logo logo" href="#0">Logo</a> -->
-			<nav class="navigation__container">
-				<ul class="navigation__list">
-					<li><a href="index.html">Acceuil</a></li>
-					<li><a href="parcours.html">Parcours académique</a></li>
-					<li><a href="experience.html">experiences et projets</a></li>
-					<li><a href="contact.html">contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<!-- END SECTION: Navigation -->
-	</header>
-	<!-- END SECTION: Intro -->
-	<br>
-	<main role="main">
-		<!-- SECTION: projets académiques -->
-		<h1>Experiences et projets</h1>
-		<section class="projets_academiques">
-			<h2>projets académiques</h2>
-			<p> <strong>Projet de prorammation en c :</strong> Ce projet a pour objectif de mettre en place une 
-				application qui permet d’administrer  les établissements de transfusion sanguine 
-				afin de gérer les opérations de transfert de sang et centraliser les informations de 
-				dons et de donneurs. Dans ce projet ma tache est de developper l'interface 
-				de gestion des RDV des dons. 
-			</p>
-			<p>ce projet est réalisé à l'aide des outil suivants:</p>
-			<img src="images/languageC.png" width="100px">
-			<img src="images/Ubuntu.png" width="250px">
-			<p><strong>Projet embarqué (architecture des microcontrolleurs) :</strong> 
-				ce projet consiste à concevoir et développer un système de surveillance et de contrôle
-				pour une salle de travail commune ou un bureau partagé. 
-				Ce système peut surveiller la température, la
-				luminosité, la présence de personnes, et permettre aux utilisateurs 
-				de déclencher des alertes en cas de besoin.</p>
-			<p>ce projet est réalisé à l'aide des outil suivants:</p>
-			<img src="images/mikroC.webp" width="180px">
-			<img src="images/isis3.jpg" width="180px">
-		</section>
-		<br>
-		<section class="projets_indépendants">
-			<h2>projets indépendants (d'autoformation hors cadre académique)</h2>
-			<p><strong>Product management system:</strong> ce projet est realisé à l'aide du html css et javascript,
-				en but d'apprener les CRUD oparations. <a href="https://aymenchagra.github.io/product-management-system/" target="_blank">lien du projet</a>
-			</p>
-			<img src="images/PMS_P1.jpg" width="700px">
-			<img src="images/PMS_P2.jpg" width="700px">
+  <main role="main">
+    <!-- SECTION: Projets académiques -->
+    <h1>Experiences et projets</h1>
+    <section class="projets_academiques">
+      <h2>Projets académiques</h2>
+      <p><strong>Projet de programmation en C :</strong> Ce projet a pour objectif de mettre en place une 
+        application qui permet d’administrer  les établissements de transfusion sanguine 
+        afin de gérer les opérations de transfert de sang et centraliser les informations de 
+        dons et de donneurs. Dans ce projet, ma tâche est de développer l'interface 
+        de gestion des RDV des dons. 
+      </p>
+      <p>Ce projet est réalisé à l'aide des outils suivants:</p>
+      <img src="images/languageC.png" width="100px" alt="C Language">
+      <img src="images/Ubuntu.png" width="250px" alt="Ubuntu">
+      <p><strong>Projet embarqué (architecture des microcontrôleurs) :</strong> 
+        Ce projet consiste à concevoir et développer un système de surveillance et de contrôle
+        pour une salle de travail commune ou un bureau partagé. 
+        Ce système peut surveiller la température, la
+        luminosité, la présence de personnes, et permettre aux utilisateurs 
+        de déclencher des alertes en cas de besoin.
+      </p>
+      <p>Ce projet est réalisé à l'aide des outils suivants:</p>
+      <img src="images/mikroC.webp" width="180px" alt="MikroC">
+      <img src="images/isis3.jpg" width="180px" alt="ISIS">
+    </section>
+    <br>
+    <!-- SECTION: Projets indépendants -->
+    <section class="projets_indépendants">
+      <h2>Projets indépendants (d'autoformation hors cadre académique)</h2>
+      <p><strong>Product Management System:</strong> Ce projet est réalisé à l'aide de HTML, CSS et JavaScript,
+        dans le but d'apprendre les opérations CRUD.
+      </p>
+      <img src="images/PMS_P1.jpg" width="700px" alt="Product Management System Image 1">
+      <img src="images/PMS_P2.jpg" width="700px" alt="Product Management System Image 2">
+			<div class="liencontainer">
+				<a class="lienProjet" href="https://aymenchagra.github.io/product-management-system/" target="_blank">Lien du projet</a>
+			</div>
 
-			<p><strong>Quizz app :</strong> 
-				Ce projet est réalisé en but d'apprener l'utilisation du "Local storage".
-				dans cette application 
-				l'utilisateur peut chercher le sujet qui lui convient,
-				puis passer le quiz question par question. Enfin, 
-				il reçoit sa note finale et peut retourner au menu principal.
-				<a href="https://aymenchagra.github.io/quiz_app/" target="_blank">lien du projet</a>
-			</p>
-			<img src="images/quizz_app_p1.jpg" width="700px">
-			<img src="images/quizz_app_p2.jpg" width="700px">
 
-			<p><strong>Conception d'un site de blog:</strong> 
-				Ce projet est realisé en but de decouvirir et apprener le css
-				et d'avoir une idée sur la conception et le design des pages web, sur les choix des couleurs des dimensions,
-				d'utilser les librairies d'icone comme "Fontawsome", et d'apprener le "responsive design".
-				<a href="https://aymenchagra.github.io/blog-website/" target="_blank">lien du projet</a>			
-			</p>
-			<img src="images/blog1.jpg" width="700px">
-			<img src="images/blog2.jpg" width="700px">
+      <p><strong>Quizz App :</strong> 
+        Ce projet est réalisé dans le but d'apprendre l'utilisation du "Local Storage".
+        Dans cette application, l'utilisateur peut chercher le sujet qui lui convient,
+        puis passer le quiz question par question. Enfin, 
+        il reçoit sa note finale et peut retourner au menu principal.
 
-		</section>
-		<!-- END SECTION: projets acaddémiques -->
-	</main>
+      </p>
+      <img src="images/quizz_app_p1.jpg" width="700px" alt="Quizz App Image 1">
+      <img src="images/quizz_app_p2.jpg" width="700px" alt="Quizz App Image 2">
+			<div class="liencontainer">
+        <a class="lienProjet" href="https://aymenchagra.github.io/quiz_app/" target="_blank">Lien du projet</a>
+			</div>
 
-	<!-- SECTION: Footer -->
-	<footer class="footer">
-		<div class="footer__wrapper wrapper--large">
-			<p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
-			
-		</div>
-	</footer>
-	<!-- END SECTION: Footer -->
+      <p><strong>Conception d'un site de blog :</strong> 
+        Ce projet est réalisé dans le but de découvrir et apprendre le CSS,
+        d'avoir une idée sur la conception et
+      </p>
+      <img src="images/blog1.jpg" width="700px" alt="Blog Image 1">
+      <img src="images/blog2.jpg" width="700px" alt="Blog Image 2">
+			<div class="liencontainer">
+				<a class="lienProjet" href="https://aymenchagra.github.io/blog-website/" target="_blank">Lien du projet</a>
+			</div>			
+    </section>
+  </main>
 
-	<!--
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="js/functions-min.js"></script>
-	-->
+  <footer class="footer">
+    <div class="footer__wrapper wrapper--large">
+      <p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -2,77 +2,202 @@
 <html lang="en">
 <head>
   <title>Contacter moi</title>
-  <!--<link rel="stylesheet" href="css/main.css">-->
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 20px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .navigation__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navigation__list li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .navigation__list a {
+      text-decoration: none;
+      color: #ecf0f1;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+      width: 100%;
+      max-width: 800px; /* Adjust the max-width as needed */
+      text-align: left;
+    }
+
+    .contact {
+      background-color: #ecf0f1;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact__heading {
+      color: #2c3e50;
+    }
+
+    .contact__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact__visual {
+      margin-right: 20px;
+    }
+
+    .contact__visual img {
+      width: 100px;
+    }
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact__form-el {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #bdc3c7;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact__form-el--submit {
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .socialmedia {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .socialmedia img {
+      width: 100px;
+    }
+
+    .Linkedin_link,
+    .Facebook_link,
+    .Instagram_link {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .Linkedin_link {
+      background-color: #3498db;
+    }
+
+    .Facebook_link {
+      background-color: #3b5998;
+    }
+
+    .Instagram_link {
+      background-color: #e4405f;
+    }
+
+    .Linkedin_link:hover,
+    .Facebook_link:hover,
+    .Instagram_link:hover {
+      background-color: #2980b9;
+    }
+
+    .footer {
+      background-color: #34495e;
+      color: #ecf0f1;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+		form{
+			width:400px;
+		}
+		form textarea{
+			height:180px;
+		}
+
+
+  </style>
 </head>
 <body>
-	
-	<!-- SECTION: Splashscreen 
-	<div class="splashscreen">
-		<div class="preloader">
-			<span class="preloader__text">Loading</span>
-		</div>
-	</div> --> 
-	<!-- END SECTION: Splashscreen -->
-	
-	<!-- SECTION: Intro -->
-	<header class="header">
-		<!-- SECTION: Navigation -->
-	<div id="top" class="navigation">
-		<div class="navigation__wrapper wrapper--large">
-			<!-- <a class="navigation__logo logo" href="#0">Logo</a> -->
-			<nav class="navigation__container">
-				<ul class="navigation__list">
-					<li><a href="index.html">Acceuil</a></li>
-					<li><a href="parcours.html">Parcours académique</a></li>
-					<li><a href="experience.html">experiences et projets</a></li>
-					<li><a href="contact.html">contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-	<!-- END SECTION: Navigation -->
-	</header>
-	<!-- END SECTION: Intro -->
-	<br>
-	<main role="main">		
-		<!-- SECTION: Contact -->
-		<section id="contact" class="contact">
-			<h1 class="contact__heading title">Contacter moi</h1>
-			<div class="contact__wrapper wrapper--large">
-				<div class="contact__visual">
-					<img src="images/contact-us.png" width="100px" >
-				</div>
-				<!-- Simple form setup: formspree.io -->
-				<form class="contact__form">
-					<input class="contact__form-el contact__form-el--name" type="text" placeholder="Your Name" spellcheck="false">
-					<input class="contact__form-el contact__form-el--email" type="email" placeholder="Your Email" spellcheck="false">
-					<textarea class="contact__form-el contact__form-el--message" placeholder="Your Message"></textarea>
-					<input class="contact__form-el contact__form-el--submit" type="submit" value="Send">
-				</form>
-			</div>
-			<br>
-			<section class="socialmedia">
-				<img src="images/social-media.png" width="100px">
-				<a class="Linkedin_link" href="https://www.linkedin.com/in/aymen-chagra-247b461b4/?originalSubdomain=tn" target="_blank">Linkedin</a>
-				<a class="Linkedin_link" href="https://www.facebook.com/medaymen.chagra/" target="_blank">Facebook</a>
-				<a class="Linkedin_link" href="https://www.instagram.com/medaymenchagra/" target="_blank">Instagram</a>
-			</section>
-		</section>
-		<!-- END SECTION: Contact -->
-	</main>
-	<!-- SECTION: Footer -->
+  
+  <header class="header">
+    <div id="top" class="navigation">
+      <div class="navigation__wrapper wrapper--large">
+        <nav class="navigation__container">
+          <ul class="navigation__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="parcours.html">Parcours académique</a></li>
+            <li><a href="experience.html">Experiences et projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-	<footer class="footer">
-		<div class="footer__wrapper wrapper--large">
-			<p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
-			
-		</div>
-	</footer>
-	<!-- END SECTION: Footer -->
-	
-	<!--
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="js/functions-min.js"></script>
-	-->
+  <main role="main">		
+    <section id="contact" class="contact">
+      <h1 class="contact__heading title">Contacter moi</h1>
+      <div class="contact__wrapper wrapper--large">
+        <div class="contact__visual">
+          <img src="images/contact-us.png" width="100px" alt="Contact Us">
+        </div>
+        <form class="contact__form">
+          <input class="contact__form-el contact__form-el--name" type="text" placeholder="Votre nom" spellcheck="false">
+          <input class="contact__form-el contact__form-el--email" type="email" placeholder="Votre email" spellcheck="false">
+          <textarea class="contact__form-el contact__form-el--message" placeholder="Votre message"></textarea>
+          <input class="contact__form-el contact__form-el--submit" type="submit" value="Envoyer">
+        </form>
+      </div>
+      <br>
+      <section class="socialmedia">
+        <img src="images/social-media.png" width="100px" alt="Social Media">
+        <a class="Linkedin_link" href="https://www.linkedin.com/in/aymen-chagra-247b461b4/?originalSubdomain=tn" target="_blank">Linkedin</a>
+        <a class="Facebook_link" href="https://www.facebook.com/medaymen.chagra/" target="_blank">Facebook</a>
+        <a class="Instagram_link" href="https://www.instagram.com/medaymenchagra/" target="_blank">Instagram</a>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper wrapper--large">
+      <p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
+    </div>
+  </footer>
 </body>
 </html>
