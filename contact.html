@@ -143,13 +143,19 @@
       text-align: center;
       width: 100%;
     }
-		form{
-			width:400px;
-		}
-		form textarea{
-			height:180px;
-		}
 
+    form {
+      width: 400px;
+    }
+
+    form textarea {
+      height: 180px;
+    }
+
+    form .errorMsg {
+      color: red;
+      font-size: 12px;
+    }
 
   </style>
 </head>
@@ -173,15 +179,34 @@
   <main role="main">		
     <section id="contact" class="contact">
       <h1 class="contact__heading title">Contacter moi</h1>
+      <div class="contact__visual">
+        <img src="images/contact-us.png" width="100px" alt="Contact Us">
+      </div>
       <div class="contact__wrapper wrapper--large">
-        <div class="contact__visual">
-          <img src="images/contact-us.png" width="100px" alt="Contact Us">
-        </div>
         <form class="contact__form">
-          <input class="contact__form-el contact__form-el--name" type="text" placeholder="Votre nom" spellcheck="false">
-          <input class="contact__form-el contact__form-el--email" type="email" placeholder="Votre email" spellcheck="false">
+          <div>
+            <span>Nom:</span>
+            <input class="contact__form-el contact__form-el--name" type="text" placeholder="Votre nom" spellcheck="false">            
+          </div>
+          <Span class="errorMsg" id="nonError"> -</Span>
+          <br>
+          <div>
+            <span>prenom:</span>
+            <input class="contact__form-el contact__form-el--lastename" type="text" placeholder="Votre prenom" spellcheck="false">
+          </div>
+          <Span class="errorMsg" id="prenomError"> -</Span>
+          <br>
+          <div>
+            <span>email:</span>
+            <input class="contact__form-el contact__form-el--email" type="email" placeholder="Votre email" spellcheck="false">
+          </div>
+          <Span class="errorMsg" id="emailError"> -</Span>
+          <br>
           <textarea class="contact__form-el contact__form-el--message" placeholder="Votre message"></textarea>
-          <input class="contact__form-el contact__form-el--submit" type="submit" value="Envoyer">
+          <Span class="errorMsg" id="messageError"> -</Span>
+          <br>
+          <button class="contact__form-el contact__form-el--submit">Envoyer</button>
+          <Span class="errorMsg" id="envoieError"> -</Span>         
         </form>
       </div>
       <br>
@@ -199,5 +224,104 @@
       <p class="footer__copyright no-margin">&copy; 2023 All rights reserved</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Fonction pour vérifier la présence de caractères numériques dans le nom et le prénom
+      function checkNameFields() {
+        const nameField = document.querySelector('.contact__form-el--name');
+        const lastnameField = document.querySelector('.contact__form-el--lastename');
+
+        const nameError = document.querySelector('#nonError');
+        const prenomError = document.querySelector('#prenomError');
+
+        const nameRegex = /^[A-Za-z]+$/; // Only alphabetic characters
+
+        if (!nameField.value || nameRegex.test(nameField.value)) {
+          nameError.textContent = '';
+        } else {
+          nameError.textContent = 'Le nom ne doit pas contenir de caractères spéciaux ou chiffres';
+        }
+
+        if (!lastnameField.value || nameRegex.test(lastnameField.value)) {
+          prenomError.textContent = '';
+        } else {
+          prenomError.textContent = 'Le prénom ne doit pas contenir de caractères spéciaux ou chiffres';
+        }
+      }
+
+      // Fonction pour valider le format de l'adresse e-mail
+      function checkEmailField() {
+        const emailField = document.querySelector('.contact__form-el--email');
+        const emailError = document.querySelector('#emailError');
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailField.value || emailRegex.test(emailField.value)) {
+          emailError.textContent = '';
+        } else {
+          emailError.textContent = 'Veuillez saisir une adresse e-mail valide';
+        }
+      }
+
+      // Fonction pour vérifier si les champs ne sont pas vides
+      function checkEmptyFields() {
+        const nameField = document.querySelector('.contact__form-el--name');
+        const lastnameField = document.querySelector('.contact__form-el--lastename');
+        const emailField = document.querySelector('.contact__form-el--email');
+        const messageField = document.querySelector('.contact__form-el--message');
+
+        const nameError = document.querySelector('#nonError');
+        const prenomError = document.querySelector('#prenomError');
+        const emailError = document.querySelector('#emailError');
+        const messageError = document.querySelector('#messageError');
+
+        if (!nameField.value) {
+          nameError.textContent = 'Le champ Nom ne doit pas être vide';
+        }
+
+        if (!lastnameField.value) {
+          prenomError.textContent = 'Le champ Prénom ne doit pas être vide';
+        }
+
+        if (!emailField.value) {
+          emailError.textContent = 'Le champ Email ne doit pas être vide';
+        }
+
+        if (!messageField.value) {
+          messageError.textContent = 'Le champ Message ne doit pas être vide';
+        }
+      }
+
+      // Écouteurs d'événements pour déclencher les fonctions lors de la saisie
+      document.querySelector('.contact__form-el--name').addEventListener('input', checkNameFields);
+      document.querySelector('.contact__form-el--lastename').addEventListener('input', checkNameFields);
+      document.querySelector('.contact__form-el--email').addEventListener('input', checkEmailField);
+      document.querySelector('.contact__form-el--message').addEventListener('input', function () {
+        document.querySelector('#messageError').textContent = ''; // Clear message error on input
+      });
+
+      // Écouteur d'événement pour le bouton d'envoi
+      document.querySelector('.contact__form-el--submit').addEventListener('click', function (event) {
+        event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+        
+        // Ajoutez ici une logique supplémentaire de validation si nécessaire
+
+        // Vérifiez les champs avant d'envoyer le formulaire
+        checkNameFields();
+        checkEmailField();
+        checkEmptyFields();
+
+        // Vérifiez s'il y a des erreurs dans le formulaire
+        const errors = document.querySelectorAll('#nonError, #prenomError, #emailError, #messageError');
+        if (!Array.from(errors).some(error => error.textContent !== '')) {
+          // Si aucun message d'erreur, envoyez le formulaire
+          alert('Formulaire envoyé avec succès!');
+        } else {
+          alert('Veuillez corriger les erreurs dans le formulaire.');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
